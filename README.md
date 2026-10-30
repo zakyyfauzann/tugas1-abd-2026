@@ -229,8 +229,14 @@ Buka JupyterLab pada `http://localhost:8888/lab`. Konfigurasi Dockerfile menjala
 
 Isi bagian ini sebelum pengumpulan akhir.
 
-> Alat AI yang digunakan: [nama alat].
+> Alat AI yang digunakan: ChatGPT.
 >
-> Bagian yang dibantu: [contoh: penjelasan error Polars atau review dokumentasi].
+> Bagian yang dibantu:
+- Penjelasan konsep Data Profiling, Data Cleaning, dan Exploratory Data Analysis (EDA)
+- Penyusunan dan debugging kode Python menggunakan Polars, DuckDB, dan Plotly
+- Pengembangan ide analisis temporal dan spasial serta visualisasi interaktif
 >
-> Verifikasi yang dilakukan: [contoh: menjalankan ulang kode, memeriksa dokumentasi resmi, dan memahami setiap cell].
+> Verifikasi yang dilakukan:
+- Menjalankan kode secara langsung menggunakan Docker dan JupyterLab.
+- Memeriksa output setiap tahapan profiling, cleaning, dan EDA.
+- Memeriksa hasil perhitungan statistik dan visualisasi berdasarkan data yang diolah

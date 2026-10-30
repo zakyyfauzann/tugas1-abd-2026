@@ -2,16 +2,18 @@
 
 ## Dataset yang Dipilih
 
-Isi informasi berikut sebelum Milestone 1.
+Dataset yang digunakan dalam proyek ini adalah SIAGA Pantura: Coupled Flood and Water Stress Dataset, dengan menggunakan subset data banjir.
 
 | Item | Isi |
 |---|---|
-| Nama dataset | `[isi nama dataset]` |
-| Sumber | `[URL BPS / Satu Data Indonesia / BMKG / HuggingFace / Kaggle]` |
-| Lisensi/ketentuan pakai | `[isi]` |
-| Ukuran | `[>= 500 MB atau > 1.000.000 baris]` |
-| Periode data | `[isi]` |
-| Unit analisis | `[isi]` |
+| Nama dataset | SIAGA Pantura: Coupled Flood and Water Stress Dataset (Flood Dataset) |
+| Sumber | [Hugging Face](https://huggingface.co/datasets/ethanchrstian/siaga-pantura-hazard-data) |
+| Lisensi/ketentuan pakai | MIT (sesuai metadata repositori Hugging Face) |
+| Ukuran | 16,27 MB dengan 1.152.432 baris |
+| Periode data | 30 Januari 2015 – 31 Desember 2024 |
+| Unit analisis | Kecamatan per hari |
+
+**Pemenuhan ketentuan ukuran:** Dataset memenuhi persyaratan melalui jumlah baris yang lebih dari 1.000.000 baris. Ukuran file belum mencapai 500 MB.
 
 ## Tempat Mencari Dataset
 

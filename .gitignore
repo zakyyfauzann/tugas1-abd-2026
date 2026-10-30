@@ -11,18 +11,14 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-# Data besar: simpan petunjuk unduh di data/README.md, bukan file data di Git
+# Dataset mentah dan hasil Parquet tidak diunggah ke Git
 data/raw/*
 !data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
 
-# Output hasil analisis dan visualisasi
-output/figures/*
-!output/figures/.gitkeep
-output/*.csv
-output/*.parquet
-output/*.json
+data/processed/*.parquet
+
+# Hasil analisis dan visualisasi
+# Folder outputs/ disimpan dalam repository
 
 # Sistem operasi dan editor
 .DS_Store
