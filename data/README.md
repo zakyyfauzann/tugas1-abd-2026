@@ -40,3 +40,44 @@ Pilih dataset Indonesia yang legal digunakan, dapat didokumentasikan sumbernya, 
 - Jangan commit dataset mentah atau hasil olahan berukuran besar ke Git.
 - File pada `data/raw/` adalah data asli dan tidak boleh diubah.
 - Simpan hasil transformasi yang dapat direproduksi pada `data/processed/`.
+
+## Hasil Akhir Data Cleaning
+
+Proses Data Cleaning dilakukan menggunakan Polars dan DuckDB.
+
+### Ringkasan Hasil
+
+| Item | Hasil |
+|---|---|
+| Jumlah baris | 1.152.432 |
+| Jumlah kolom awal | 13 |
+| Jumlah kolom akhir | 20 |
+| Ukuran file hasil cleaning | 27 MB |
+| Missing values | 0 |
+| Duplikasi kunci bisnis | 0 |
+| Baris yang dihapus | 0 |
+
+### Penanganan Outlier
+
+Deteksi outlier menggunakan metode Interquartile Range (IQR) dengan batas 1,5 × IQR.
+
+Winsorization dilakukan dengan membuat tujuh kolom tambahan berakhiran `_winsorized`. Kolom asli tetap dipertahankan agar informasi pengukuran awal tidak hilang.
+
+### Validasi Data
+
+Validasi akhir menunjukkan:
+- Tidak terdapat missing values.
+- Tidak terdapat duplikasi berdasarkan `district_id` dan `date`.
+- Tidak terdapat ketidaksesuaian tahun dan tanggal.
+- Tidak terdapat ketidaksesuaian bulan dan tanggal.
+- Seluruh label banjir dan kategori pesisir valid.
+- Tidak terdapat nilai non-finite.
+
+### File Hasil Pengolahan
+
+| File | Keterangan |
+|---|---|
+| `flood_dataset_cleaned.parquet` | Dataset final hasil cleaning |
+| `duckdb_summarize.csv` | Ringkasan statistik 20 kolom menggunakan DuckDB |
+
+Dataset hasil cleaning disimpan menggunakan format Parquet dengan kompresi Zstandard.
